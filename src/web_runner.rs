@@ -98,6 +98,10 @@ impl Plugin for WebRunnerPlugin {
     }
 }
 
+pub fn destroy_app() {
+    _ = APP.take();
+}
+
 fn web_runner(mut receiver: Observer) -> impl FnOnce(App) -> AppExit + 'static {
     move |app: App| {
         app.world().resource::<ScheduleTrigger>().trigger_async();

@@ -8,7 +8,7 @@ pub mod relative_mouse;
 pub mod task;
 mod web_runner;
 
-pub use web_runner::ScheduleTrigger;
+pub use web_runner::{ScheduleTrigger, destroy_app};
 
 #[cfg(feature = "router")]
 pub mod router;
